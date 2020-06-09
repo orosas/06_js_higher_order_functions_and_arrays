@@ -90,20 +90,79 @@ const companies= [
 
 
 // Nota: Ejemplo 3 de map usando arrow function
-// const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`
-// );
+// const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
 // console.log(testMap);
  
 // Nota: Ejemplo 3 maps encadenados
-const ageMap = ages
-    .map(age => Math.sqrt(age))
-    .map(age => age * 2);
+// const ageMap = ages
+//     .map(age => Math.sqrt(age))
+//     .map(age => age * 2);
 
-console.log(ageMap);
-
-
+// console.log(ageMap);
 
 
 
+//
+// Sort Section
+//
 
+// Nota: Ejemplo 1 Sort puede tomar una función de comparación, como en éste caso
+// Referencia:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// Se ordenan compañías por fecha de start
+// const sortedCompanies = companies.sort(function(c1, c2) {
+//   if(c1.start > c2.start){
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
+
+// console.log(sortedCompanies);
+
+// Nota: Ejemplo 2 sort. Arrow function and conditional ternary operator
+// const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1 ));
+
+// console.log(sortedCompanies);
+
+// Nota: Ejemplo 3 sort ages
+// OJO: Ordena por primer dígito. Muestra: [12, 13 ..., 44, 45, 5, 54]
+// const sortAges = ages.sort()
+// console.log(sortAges);
+
+
+// Nota: Ejemplo 4 sort ages de números en modo menor a mayor. DE MAYOR  a menor se usa b - a
+// const sortAges = ages.sort((a, b) => a - b);
+// console.log(sortAges);
+
+
+//
+// reduce Section
+//
+
+// Nota: Ejemplo 1 usando for, sin reduce(). Suma todas las edades
+// let ageSum = 0;
+// for (let i = 0; i < ages.length; i++) {
+//   ageSum += ages[i];
+// }
+// console.log(ageSum);
+
+// Nota: Ejemplo 2, usando reduce. Suma todas las edades
+// const ageSum = ages.reduce(function(total, age) {
+//   return total + age;
+// }, 0);
+// console.log(ageSum);
+
+// Nota: Ejemplo 3, usando reduce and arrow function. Suma todas las edades
+// const ageSum = ages.reduce((total, age) => total + age, 0);
+// console.log(ageSum);
+
+// Nota: Ejemplo 4, Get total years for all companies
+// const totalYears = companies.reduce(function(total, company) {
+//   return total + (company.end - company.start);
+// }, 0);
+// console.log(totalYears);
+
+// Nota: Ejemplo 5, Get total years for all companies using arrow functino
+const totalYears = companies.reduce((tot}
 
