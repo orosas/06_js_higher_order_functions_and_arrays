@@ -164,5 +164,21 @@ const companies= [
 // console.log(totalYears);
 
 // Nota: Ejemplo 5, Get total years for all companies using arrow functino
-const totalYears = companies.reduce((tot}
+// const totalYears = companies.reduce((total, company) => total + (company.end - company.start), 0);
+// console.log(totalYears);
 
+
+
+// 
+// Ejemplo combinando Map, sort, filter, reduce
+// 1°: Multiplica por 2 cada elemento de ages
+// 2°: Crea un nuevo array con los elementos >= 40
+// 3°: sort ordena los elementos de menor a mayor
+// 4°: reduce para sumar los elementos
+const combined = ages
+  .map(age => age * 2)
+  .filter(age => age >= 40)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a+b, 0);
+
+console.log(combined);
