@@ -54,6 +54,56 @@ const companies= [
 //   }
 // });
 
-const retailCompanies = companies.filter(company => company.category === 'Retail');
+// const retailCompanies = companies.filter(company => company.category === 'Retail');
+// console.log(retailCompanies);
 
-console.log(retailCompanies);
+
+// Get 80's companies
+// const eightiesCompanies = companies.filter(company => 
+//   (company.start >= 1980 && company.start < 1990 ));
+// console.log(eightiesCompanies);
+
+
+// Get companies that lasted 10 years or more
+// const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+// console.log(typeof(lastedTenYears));
+// Nota: Muestra conversión de object lastedTenYears en array
+// console.log(Object.entries(lastedTenYears));
+// console.log(lastedTenYears);
+
+
+// map 
+
+// Create array of company names
+// Nota: Ejemplo 1 de map
+// const companyNames = companies.map(function(company){
+//   return company.name;
+// });
+// console.log(companyNames);
+
+
+// Nota: Ejemplo 2 de map
+// const testMap = companies.map(function(company){
+//   return `${company.name} [${company.start} - ${company.end}]`;
+// });
+// console.log(testMap);
+
+
+// Nota: Ejemplo 3 de map usando arrow function
+// const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`
+// );
+// console.log(testMap);
+ 
+// Nota: Ejemplo 3 maps encadenados
+const ageMap = ages
+    .map(age => Math.sqrt(age))
+    .map(age => age * 2);
+
+console.log(ageMap);
+
+
+
+
+
+
+
